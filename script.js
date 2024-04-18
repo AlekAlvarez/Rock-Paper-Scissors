@@ -64,5 +64,16 @@ function playGame(){
             lose++;
         }
     }
+    console.log("Final Score");
+    console.log(`You: ${win} Computer: ${lose}`);
+    if(win>lose){
+        console.log("Overrall You Win");
+    }
+    else if(win<lose){
+        console.log("Overrall You lose");
+    }
+    else{
+        console.log("Overral You Tie");
+    }
 }
 playGame();
