@@ -13,30 +13,56 @@ function playRound(playerChoice, computerChoice){
     playerChoice=playerChoice.toLowerCase();
     computerChoice=computerChoice.toLowerCase();
     if(playerChoice==computerChoice){
-        return "You tie! You both choose "+playerChoice;
+        console.log("You tie! You both choose "+playerChoice);
+        return 0;
     }
     if(playerChoice=="rock"){
         if(computerChoice=="paper"){
-            return "You loose! The Computers Paper beats your Rock";
+            console.log("You loose! The Computers Paper beats your Rock");
+            return -1;
         }
         else{
-            return "You Win! Your Rock beats the Computer's Scissors";
+           console.log("You Win! Your Rock beats the Computer's Scissors");
+           return 1;
         }
     }
     else if(playerChoice=="paper"){
         if(computerChoice=="rock"){
-            return "You Win! Your Paper beats the Computers Rock";
+            console.log("You Win! Your Paper beats the Computers Rock");
+            return 1;
         }
         else{
-            return "You lose! The Computers Scissors beat your Paper";
+            console.log("You lose! The Computers Scissors beat your Paper");
+            return -1;
         }
     }
     else{
         if(computerChoice=="rock"){
-            return "You loose! The Computers Rock beat your Scissors";
+            console.log("You loose! The Computers Rock beat your Scissors");
+            return -1;
         }
         else{
-            return "You Win! Your Scissors beat the Computers paper";
+            console.log("You Win! Your Scissors beat the Computers paper");
+            return 1;
         }
     }
 }
+function playGame(){
+    let win=0,lose=0;
+    for(let i=0;i<5;i++){
+        console.log("You:"+win+" Computer:"+lose);
+        let playerChoice=window.prompt("What do you choose?");
+        let result=playRound(playerChoice,getComputerChoice());
+        if(result==1){
+            win++;
+        }
+        else if(result==-1){
+            lose++;
+        }
+        else{
+            win++;
+            lose++;
+        }
+    }
+}
+playGame();
