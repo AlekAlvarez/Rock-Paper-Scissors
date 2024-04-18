@@ -17,7 +17,7 @@ function playRound(playerChoice, computerChoice){
     }
     if(playerChoice=="rock"){
         if(computerChoice=="paper"){
-            return "You loose! The Computers Paper beats your Paper";
+            return "You loose! The Computers Paper beats your Rock";
         }
         else{
             return "You Win! Your Rock beats the Computer's Scissors";
@@ -28,7 +28,7 @@ function playRound(playerChoice, computerChoice){
             return "You Win! Your Paper beats the Computers Rock";
         }
         else{
-            return "You lose! The Computers Scissors beat your Rock";
+            return "You lose! The Computers Scissors beat your Paper";
         }
     }
     else{
