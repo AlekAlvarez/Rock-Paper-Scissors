@@ -52,7 +52,7 @@ function playRound(playerChoice, computerChoice){
 function updateScore(){
     const div=document.querySelector("#results");
     if(win<5&&loss<5){
-    div.innerText=`You:${win} Computer${loss}`;
+    div.innerText=`You:${win} Computer:${loss}`;
     }
     else{
         if(win>=5){
